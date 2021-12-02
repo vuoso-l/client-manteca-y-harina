@@ -42,7 +42,7 @@ const createForm = (image) => {
                 </div>
                 <div>
                     <button class="btnPut" type="submit">Actualizar imagen</button>
-                    <button class="btnReturn" type="submit">Volver</button>
+                    <a class="btnReturn" href="/public/views/upload.html">Cancelar y volver</a>
                 </div>
             </form>
                 `

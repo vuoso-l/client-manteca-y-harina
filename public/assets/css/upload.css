@@ -1,0 +1,130 @@
+.containerUpload,
+.containerTable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+
+h2 {
+  font-size: 36px;
+  text-shadow: 4px 4px 8px grey;
+  padding-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5px;
+  /* border: 2px solid rgb(190, 83, 56); */
+  border: 2px solid #ff6701;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+form div,
+.btnFormUpdate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+label,
+button,
+.btnView {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+label {
+  /* background-color: rgb(254 138 70); */
+  background-color: #ff6701;
+}
+
+input,
+textarea,
+select {
+  padding: 5px 10px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #0000ffb0;
+}
+
+table {
+  font-size: 13.5px;
+  text-align: center;
+  max-width: 90%;
+}
+
+th {
+  font-size: 18px;
+}
+
+tr {
+  border-bottom: 1px solid black;
+}
+
+td {
+  border-right: 1px dashed black;
+  padding: 0 2px;
+}
+
+.tdBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+tbody tr:nth-child(odd) {
+  /* background-color: rgb(254 138 70); */
+  background-color: #fea82f;
+}
+
+.btnView,
+.btnDelete,
+.btnUpdate,
+.btnPut,
+.btnReturn {
+  color: white;
+  margin: 1px 0;
+  font-size: 14px;
+}
+
+.btnView {
+  background-color: blue;
+}
+
+.btnDelete {
+  background-color: red;
+}
+
+.btnFormUpdate {
+  flex-direction: row;
+}
+
+@media (min-width: 768px) {
+  td {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  form {
+    font-size: 18px;
+    padding: 20px 100px;
+  }
+  th {
+    font-size: 22px;
+  }
+  td {
+    font-size: 18px;
+  }
+}

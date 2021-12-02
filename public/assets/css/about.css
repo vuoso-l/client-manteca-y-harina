@@ -1,0 +1,46 @@
+.containerAbout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 15px;
+}
+
+.fotoPerfil {
+  width: 50%;
+  height: 200px;
+  background: aliceblue url("../imgMyH/cv.jpg") no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  /* box-shadow: -8px 1px 2px 2px rgb(190, 83, 56); */
+  box-shadow: -8px 1px 2px 2px #FF6701;
+  margin-bottom: 20px;
+}
+
+.containerAbout p{
+  text-align: justify;
+}
+
+@media (min-width: 540px) {
+  .fotoPerfil {
+    width: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  .fotoPerfil {
+    width: 23%;
+  }
+  .containerAbout p {
+    width: 65%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fotoPerfil {
+    height: 250px;
+    width: 20%;
+  }
+  .containerAbout p {
+    width: 50%;
+  }
+}

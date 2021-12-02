@@ -16,7 +16,8 @@ fetch(urlApi + "/images")
             else {
                 containerGallery.innerHTML = `
                 <section>
-                    <p>Inconvenientes técnicos, disculpen las molestias!</p>
+                    <p>Inconvenientes técnicos, no hay imágenes cargadas</p>
+                    <p>Disculpen las molestias!</p>
                     <img class="imgError" src="/public/assets/imgMyH/logo.jpg" alt="Logo m&h"></img>
                 </section>   
                 `;

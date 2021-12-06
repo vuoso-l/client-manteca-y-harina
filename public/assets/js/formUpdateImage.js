@@ -20,24 +20,32 @@ const createForm = (image) => {
                     <select name="section" id="section">
                         <option value="" selected disabled>${image.section}</option>
                         <option value="home">Sección para home</option>
-                        <option value="bautismo">Sección para bautismo</option>
+                        <option value="tortasVarias">Sección para tortas varias</option>
                         <option value="navidad">Sección para navidad</option>
-                        <option value="cobraKai">Sección para Cobra Kai</option>
-                        <option value="equipos">Sección para equipos</option>
-                        <option value="pascuas">Sección para pascuas</option>
-                        <option value="potter">Sección para Harry Potter</option>
+                        <option value="tortasBodas">Sección para tortas de bodas</option>
+                        <option value="tortasMusicales">Sección para tortas musicales</option>
+                        <option value="comuniones">Sección para comuniones</option>
+                        <option value="infantiles">Sección para infantiles</option>
+                        <option value="tartasDulces">Sección para tartas dulces</option>
+                        <option value="postres">Sección para postres</option>
+                        <option value="alfajores">Sección para alfajores</option>
+                        <option value="porcelanaFria">Sección para porcelana fría</option>
                     </select>
                 </div>
                 <div>
                     <label for="thematic">Temática</label>
                     <select name="thematic" id="thematic">
                         <option value="" selected disabled>${image.thematic}</option>
-                        <option value="Bautismo">Bautismo</option>
-                        <option value="Navidad">Navidad</option>
-                        <option value="CobraKai">Cobra Kai</option>
-                        <option value="Equipos">Equipos</option>
-                        <option value="Pascuas">Pascuas</option>
-                        <option value="HarryPotter">Harry Potter</option>
+                        <option value="tortasVarias">Sección para tortas varias</option>
+                        <option value="navidad">Sección para navidad</option>
+                        <option value="tortasBodas">Sección para tortas de bodas</option>
+                        <option value="tortasMusicales">Sección para tortas musicales</option>
+                        <option value="comuniones">Sección para comuniones</option>
+                        <option value="infantiles">Sección para infantiles</option>
+                        <option value="tartasDulces">Sección para tartas dulces</option>
+                        <option value="postres">Sección para postres</option>
+                        <option value="alfajores">Sección para alfajores</option>
+                        <option value="porcelanaFria">Sección para porcelana fría</option>
                     </select>
                 </div>
                 <div>

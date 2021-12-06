@@ -15,6 +15,7 @@ const updateImage = (form, image) => {
         .catch(error => console.error('Error:', error))
         .then((contenido) => {
             console.log(contenido);
+            location = "/public/views/upload.html"
         })
 }
 

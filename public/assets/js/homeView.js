@@ -24,7 +24,7 @@ fetch(urlApi + "/images")
         console.error('Error:', error)
         container.innerHTML += `
                 <section>
-                    <p>Inconvenientes técnicos, no hay imágenes cargadas</p>
+                    <p>Inconvenientes técnicos, no se puede acceder a las imágenes</p>
                     <p>Disculpen las molestias!</p>
                     <img class="imgError" src="./public/assets/imgMyH/logo.jpg" alt="Logo m&h"></img>
                 </section>   

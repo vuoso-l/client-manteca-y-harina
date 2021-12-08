@@ -1,4 +1,6 @@
 import { createFormAndUpdateImage } from "./createFormAndUpdateImage.js";
+import { deleteImg } from "./deleteImg.js";
+
 const tbody = document.querySelector("tbody");
 const urlApi = "https://api-manteca-y-harina.herokuapp.com";
 
@@ -24,30 +26,6 @@ fetch(urlApi + "/upload")
 
         createFormAndUpdateImage(imagen);
 
-        //const btnDelete = document.querySelectorAll(".btnDelete");
-        tbody.querySelectorAll(".btnDelete").forEach((element) => {
-            element.addEventListener("click", (e) => {
-                imagen.forEach(img => {
-                    if (e.target.id == img.id) {
-                        console.log(e.target.id);
-                        console.log(img.id);
-                        const urlApi = "https://api-manteca-y-harina.herokuapp.com";
-                        const urlDelete = "/delete/";
-
-                        let settings = {
-                            method: "DELETE",
-                        }
-                        fetch(`${urlApi}${urlDelete}${img.id}`, settings)
-                            .then((response) => response.json())
-                            .catch(error => console.error('Error:', error))
-                            .then((contenido) => {
-                                console.log(contenido);
-
-                            })
-                    }
-                })
-
-            })
-        })
+        deleteImg(imagen);
 
     })

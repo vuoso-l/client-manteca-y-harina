@@ -6,6 +6,7 @@ const urlApi = "https://api-manteca-y-harina.herokuapp.com";
 fetch(urlApi + "/images")
     .then((response) => response.json())
     .then((contenido) => {
+        containerGallery.style.display = "none";
         let image = contenido.image;
         if (contenido) {
             image.filter((element) => {
@@ -113,6 +114,7 @@ fetch(urlApi + "/images")
 
 const createShowImage = (images) => {
     container.style.display = "none";
+    containerGallery.style.display = "block";
     let h2 = document.querySelector(".containerGallery h2");
     let img = document.querySelector(".containerGallery img");
     h2.innerHTML = images.thematic;

@@ -7,9 +7,10 @@ fetch(urlApi + "/images")
     .then((response) => response.json())
     .then((contenido) => {
         let image = contenido.image;
-        image.filter((element) => {
-            if (element.section == "HOME") {
-                container.innerHTML += `
+        if (contenido) {
+            image.filter((element) => {
+                if (element.section == "HOME") {
+                    container.innerHTML += `
                 <section>                
                     <h2>${element.thematic}</h2>
                     <img class="small_img" title="${element.thematic}" src="${element.imageURL}"
@@ -17,8 +18,18 @@ fetch(urlApi + "/images")
                     <p>${element.description}</p> 
                 </section>   
                 `;
-            }
-        })
+                }
+            })
+        }
+        else {
+            container.innerHTML = `
+            <section>
+                <p>Inconvenientes técnicos, no se puede acceder a las imágenes</p>
+                <p>Disculpen las molestias!</p>
+                <img class="imgError" src="/public/assets/imgMyH/logo.jpg" alt="Logo m&h"></img>
+            </section>   
+            `;
+        }
         container.querySelectorAll(".small_img").forEach(element => {
             element.addEventListener("click", (e) => {
                 image.map(img => {
@@ -74,6 +85,13 @@ fetch(urlApi + "/images")
                             }
                             break;
                         default:
+                            containerGallery.innerHTML = `
+                                <section>
+                                    <p>Inconvenientes técnicos, no se puede acceder a las imágenes</p>
+                                    <p>Disculpen las molestias!</p>
+                                    <img class="imgError" src="/public/assets/imgMyH/logo.jpg" alt="Logo m&h"></img>
+                                </section>   
+                            `;
                             break;
                     }
                 })
@@ -84,12 +102,12 @@ fetch(urlApi + "/images")
     .catch(error => {
         console.error('Error:', error)
         container.innerHTML = `
-                <section>
-                    <p>Inconvenientes técnicos, no se puede acceder a las imágenes</p>
-                    <p>Disculpen las molestias!</p>
-                    <img class="imgError" src="./public/assets/imgMyH/logo.jpg" alt="Logo m&h"></img>
-                </section>   
-                `;
+            <section>
+                <p>Inconvenientes técnicos, surgió un error inesperado</p>
+                <p>Disculpen las molestias!</p>
+                <img class="imgError" src="/public/assets/imgMyH/logo.jpg" alt="Logo m&h"></img>
+            </section>   
+            `;
     })
 
 

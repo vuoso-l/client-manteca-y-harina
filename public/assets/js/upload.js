@@ -25,5 +25,6 @@ const uploadImage = () => {
         .catch(error => console.error('Error:', error))
         .then((contenido) => {
             console.log('Success:', contenido);
+            location.reload();
         })
 }

@@ -1,8 +1,13 @@
 /* Main */
-.container {
+.container,
+.containerGallery {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.containerGallery {
+  padding: 100px 50px;
 }
 
 section {
@@ -10,33 +15,45 @@ section {
   flex-direction: column;
   align-items: center;
   padding: 20px 0px;
-  border-bottom: medium solid #FF6701;
+  border-bottom: medium solid #ff6701;
   margin: 0 10px 20px;
 }
 
-h2 {
-  font-size: 30px;
+.container h2,
+.containerGallery h2 {
   text-shadow: 4px 4px 8px grey;
 }
 
-#small_img {
+.container h2 {
+  font-size: 30px;
+}
+
+.containerGallery h2 {
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+
+.swiper-container {
+  width: 100%;
+}
+
+.small_img {
   height: 250px;
   padding: 10px 0;
   transition: 0.5s;
 }
 
-#small_img:hover {
-  width: 105%;
+.small_img:hover {
   box-shadow: 4px 4px 8px grey;
   cursor: pointer;
 }
 
-.container section p{
+.container section p {
   text-align: center;
   font-size: 16px;
 }
 
-.imgError{
+.imgError {
   border-radius: 50%;
   height: 250px;
   animation: rotar 3s infinite;
@@ -44,29 +61,34 @@ h2 {
 
 @keyframes rotar {
   0% {
-      transform: rotateY(0deg);
+    transform: rotateY(0deg);
   }
   50% {
-      transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
   100% {
-      transform: rotateY(360deg);
+    transform: rotateY(360deg);
   }
 }
 
 @media (min-width: 768px) {
-  .container{
-      flex-direction: row;
-      flex-wrap: wrap;
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-  section{
-      width: 47%;
+  section {
+    width: 47%;
+  }
+  .swiper-container {
+    width: 60%;
   }
 }
 
 @media (min-width: 1024px) {
-  
-  section{
-      width: 32%;
+  section {
+    width: 32%;
+  }
+  .swiper-container {
+    width: 40%;
   }
 }

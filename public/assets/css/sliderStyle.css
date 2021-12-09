@@ -2,27 +2,25 @@
 .gallery-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 100px 50px;
+  padding: 85px 50px;
 }
 
 /* Hide the images by default */
 .mySlides {
   width: 100%;
-  height: 300px;
   display: none;
 }
 
-.containerGallery h2 {
+.gallery-container h2 {
   text-shadow: 4px 4px 8px grey;
-  font-size: 36px;
-  padding-bottom: 20px;
+  font-size: 28px;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 .btnGallery {
   display: flex;
-  justify-content: space-between;
-  padding-top: 15px;
+  justify-content: space-around;
 }
 
 /* Next & previous buttons */
@@ -36,12 +34,6 @@
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -58,13 +50,8 @@
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+.dotContainer{
+  text-align: center;
 }
 
 /* The dots/bullets/indicators */
@@ -79,9 +66,9 @@
   transition: background-color 0.6s ease;
 }
 
-.slideshow-container .active,
+.gallery-container .active,
 .dot:hover {
-  background-color: #717171;
+  background-color: #4d4d4d;
 }
 
 /* Fading animation */
@@ -110,7 +97,24 @@
   }
 }
 
+@media (min-width: 540px) {
+  .gallery-container h2 {
+    font-size: 32px;
+  }
+  .gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mySlides {
+    width: 70%;
+}
+}
+
 @media (min-width: 768px) {
+  .gallery-container h2 {
+    font-size: 36px;
+  }
   .gallery {
     display: flex;
     flex-direction: column;
@@ -119,10 +123,25 @@
   .mySlides {
     width: 60%;
   }
+  .text{
+    font-size: 26px;
+  }
+  .dotContainer{
+    padding-top: 20px;
+  }
 }
 
 @media (min-width: 1024px) {
+  .gallery-container h2 {
+    font-size: 34px;
+  }
+  .btnGallery {
+    justify-content: space-evenly;
+  }
   .mySlides {
     width: 40%;
+  }
+  .dotContainer{
+    padding-top: 50px;
   }
 }

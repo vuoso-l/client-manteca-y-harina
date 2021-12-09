@@ -1,13 +1,8 @@
 /* Main */
-.container,
-.containerGallery {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.containerGallery {
-  padding: 100px 50px;
 }
 
 section {
@@ -19,22 +14,9 @@ section {
   margin: 0 10px 20px;
 }
 
-.container h2,
-.containerGallery h2 {
-  text-shadow: 4px 4px 8px grey;
-}
-
 .container h2 {
+  text-shadow: 4px 4px 8px grey;
   font-size: 30px;
-}
-
-.containerGallery h2 {
-  font-size: 36px;
-  padding-bottom: 20px;
-}
-
-.swiper-container {
-  width: 100%;
 }
 
 .small_img {
@@ -79,16 +61,10 @@ section {
   section {
     width: 47%;
   }
-  .swiper-container {
-    width: 60%;
-  }
 }
 
 @media (min-width: 1024px) {
   section {
     width: 30%;
-  }
-  .swiper-container {
-    width: 40%;
   }
 }

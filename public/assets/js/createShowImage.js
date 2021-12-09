@@ -1,16 +1,17 @@
-const containerGallery = document.querySelector(".containerGallery");
-const swipper = document.querySelector(".swiper-wrapper");
+const containerGallery = document.querySelector(".gallery-container");
+const gallery = document.querySelector(".gallery");
 const container = document.querySelector(".container");
 
 const createShowImage = (images) => {
     container.style.display = "none";
-    containerGallery.style.display = "block";
-    let h2 = document.querySelector(".containerGallery h2");
-    let img = document.querySelector(".containerGallery img");
-    h2.innerHTML = images.thematic;
-    img.setAttribute("src", images.imageURL);
-    img.setAttribute("alt", images.name);
-    swipper.appendChild(img);
+    containerGallery.style.display = "flex";
+
+    gallery.innerHTML += `    
+    <div class="mySlides fades">
+        <img src="${images.imageURL}" alt="${images.name}">
+        <div class ="text">${images.title}</div>
+    </div>
+    `
 }
 
 export { createShowImage };

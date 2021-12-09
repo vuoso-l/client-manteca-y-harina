@@ -1,6 +1,6 @@
 import { selectImgGallery } from "./selectImgGallery.js";
 
-const containerGallery = document.querySelector(".containerGallery");
+const containerGallery = document.querySelector(".gallery-container");
 const container = document.querySelector(".container");
 const urlApi = "https://api-manteca-y-harina.herokuapp.com";
 

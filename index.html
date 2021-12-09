@@ -12,11 +12,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <!--Swiper-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.css">
     <link rel="stylesheet" href="./public/assets/css/estilosGenerales.css">
     <link rel="stylesheet" href="./public/assets/css/header.css">
     <link rel="stylesheet" href="./public/assets/css/home.css">
+    <link rel="stylesheet" href="./public/assets/css/sliderStyle.css">
     <link rel="stylesheet" href="./public/assets/css/footer.css">
 </head>
 
@@ -37,7 +36,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./public/views/about.html">About</a>
-                        </li>                        
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./public/views/contact.html">Contact</a>
                         </li>
@@ -50,22 +49,33 @@
         </nav>
     </header>
     <main>
-        <div class="container">            
+        <div class="container">
             <!-- Agrego con Javascript las secciones-->
         </div>
-        <div class="containerGallery">
-            <h2></h2>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- Agrego con Javascript los src y alt de las imágenes-->
-                    <img class="swiper-slide">
+
+        <!-- Slideshow container -->
+        <div class="gallery-container">
+            <div class="gallery">
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fades">
+                    <img src="public/assets/imgMyH/logo.jpg" alt="Logo Manteca & Harina">
+                    <div class="text">Logo Manteca & Harina</div>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-scrollbar"></div>
+            </div>
+            <!-- Next and previous buttons -->
+            <div class="btnGallery">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </div>
+
     </main>
     <footer>
         <h3>Seguinos en nuestras redes</h2>
@@ -77,13 +87,10 @@
             </div>
     </footer>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
-    <!--Swiper-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
-    <script src="./public/assets/js/swiper.js"></script>
+    <script src="./public/assets/js/slider.js"></script>
     <script src="./public/assets/js/homeView.js" type="module"></script>
 </body>
 

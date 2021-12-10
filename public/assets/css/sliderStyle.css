@@ -1,6 +1,6 @@
 /* Slideshow container */
 .gallery-container {
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 85px 50px;
 }

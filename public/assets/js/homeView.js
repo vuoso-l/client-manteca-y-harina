@@ -1,12 +1,13 @@
 import { selectImgGallery } from "./selectImgGallery.js";
 
-const containerGallery = document.querySelector(".gallery-container");
+const containerSkeleton = document.querySelector(".skeleton-container");
 const container = document.querySelector(".container");
 const urlApi = "https://api-manteca-y-harina.herokuapp.com";
 
 fetch(urlApi + "/images")
     .then((response) => response.json())
     .then((contenido) => {
+        containerSkeleton.style.display = "none";
         let image = contenido.image;
         if (contenido) {
             image.filter((element) => {

@@ -1,0 +1,46 @@
+.skeleton-container {
+  width: 100%;
+  background: radial-gradient(#ffe194, #ffb319);
+}
+
+.skeleton-animation {
+  animation: loadingAnimation 1.5s infinite;
+}
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px;
+  border-bottom: medium solid #ff6701;
+  margin: 0 10px 20px;
+  background: radial-gradient(#ffe194, #ffb319);
+}
+
+.skeleton h2 {
+  padding: 15px;
+  width: 80%;
+}
+
+.imgSkeleton {
+  width: 100%;
+  height: 250px;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.skeleton p {
+  padding: 30px;
+  width: 100%;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    background: radial-gradient(#ffe194, #ffb319);
+  }
+  50% {
+    background: radial-gradient(#fde6aa, #fdc34d);
+  }
+  100% {
+    background: radial-gradient(#ffe194, #ffb319);
+  }
+}

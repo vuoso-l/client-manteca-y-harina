@@ -44,3 +44,10 @@
     background: radial-gradient(#ffe194, #ffb319);
   }
 }
+
+@media (min-width: 768px) {
+  .skeleton-container {
+    display: flex;
+    justify-content: center;
+  }
+}

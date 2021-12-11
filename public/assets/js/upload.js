@@ -1,8 +1,4 @@
 const form = document.querySelector("form");
-const image = document.querySelector("#image");
-const title = document.querySelector("#title");
-const description = document.querySelector("#description");
-const tematica = document.querySelector("#tematica");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();

@@ -1,3 +1,5 @@
+import { showImageUpload } from "./showImageUpload.js";
+
 const tbody = document.querySelector("tbody");
 
 const deleteImg = (images) => {
@@ -19,6 +21,8 @@ const deleteImg = (images) => {
                         .catch(error => console.error('Error:', error))
                         .then((contenido) => {
                             console.log(contenido);
+                            //showImageUpload(images);
+                            location.reload();
                         })
                 }
             })

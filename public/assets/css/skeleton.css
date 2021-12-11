@@ -1,6 +1,14 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .skeleton-container {
-  width: 100%;
-  background: radial-gradient(#ffe194, #ffb319);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
 }
 
 .skeleton-animation {
@@ -10,27 +18,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
   padding: 20px 0px;
-  border-bottom: medium solid #ff6701;
+  border-bottom: #ff6701;
   margin: 0 10px 20px;
-  background: radial-gradient(#ffe194, #ffb319);
 }
 
 .skeleton h2 {
   padding: 15px;
-  width: 80%;
+  width: 70%;
+  border-radius: 10px;
 }
 
 .imgSkeleton {
-  width: 100%;
+  width: 90%;
   height: 250px;
   padding: 10px 0;
   margin: 10px 0;
+  border-radius: 10px;
 }
 
 .skeleton p {
   padding: 30px;
-  width: 100%;
+  width: 70%;
+  border-radius: 10px;
 }
 
 @keyframes loadingAnimation {
@@ -38,16 +49,31 @@
     background: radial-gradient(#ffe194, #ffb319);
   }
   50% {
-    background: radial-gradient(#fde6aa, #fdc34d);
+    background: radial-gradient(#ffb319, #ffe194);
   }
   100% {
     background: radial-gradient(#ffe194, #ffb319);
   }
 }
 
+@media (min-width: 540px) {
+  .skeleton {
+    width: 65%;
+  }
+}
+
 @media (min-width: 768px) {
   .skeleton-container {
-    display: flex;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .skeleton{
+    width: 47%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skeleton {
+    width: 30%;
   }
 }

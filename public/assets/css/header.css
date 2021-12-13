@@ -1,15 +1,15 @@
 header {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
   background-color: #f9fafb;
-  padding: 15px 10px;
+  padding: 15px 0;
 }
 
 h1 {
   /* color: rgb(190, 83, 56); */
   color: #FF6701;
-  font-size: 26px;
+  font-size: 28px;
 }
 
 h1::before {
@@ -20,6 +20,17 @@ h1::before {
   padding: 8px 23.5px;
 }
 
+.navbar-toggler-icon {
+  width: 0.8em;
+  height: 0.8em;
+}
+
+@media (min-width: 375px) {
+  h1 {
+    font-size: 34px;
+  }
+}
+
 @media (min-width: 768px) {
   h1 {
     font-size: 45px;
@@ -28,17 +39,17 @@ h1::before {
   h1::before {
     padding: 20px 40px;
   }
+  .navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
 }
 
 @media (min-width: 1024px) {
   header {
-    flex-direction: column;
     padding: 20px 10px 0px;
   }
   h1{
     padding-bottom: 5px;
-  }
-  .navbar-expand-lg{
-    font-size: 25px;
   }
 }

@@ -15,7 +15,7 @@ section {
 
 .container h2 {
   text-shadow: 4px 4px 8px grey;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .small_img {
@@ -52,10 +52,20 @@ section {
   }
 }
 
+@media (min-width: 375px) {
+  .container h2 {
+    font-size: 28px;
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .container h2 {
+    text-shadow: 4px 4px 8px grey;
+    font-size: 30px;
   }
   section {
     width: 47%;

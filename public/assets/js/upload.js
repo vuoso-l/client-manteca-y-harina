@@ -1,4 +1,5 @@
 const form = document.querySelector("form");
+import {closeSession} from "./closeSession.js";
 let tokenJWT = localStorage.getItem("jwt");
 console.log(tokenJWT);
 //una vez funcione el bloqueo y acceso con el token
@@ -6,8 +7,10 @@ console.log(tokenJWT);
 //si no se tiene el token
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    uploadImage();
+    uploadImage();    
 })
+
+closeSession();
 
 /* Consumiendo la API */
 const apiBaseUrl = "http://localhost:3000";
@@ -15,7 +18,7 @@ let apiUpload = "/upload";
 
 const uploadImage = () => {
     const myHeaders = new Headers();
-    myHeaders.append("authorization", tokenJWT);
+    myHeaders.append("authorization", `Bearer ${tokenJWT}`);
 
     const requestOptions = {
         method: 'POST',

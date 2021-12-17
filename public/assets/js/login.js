@@ -30,8 +30,9 @@ const loguinUserAndRedirect = () => {
     fetch(apiBaseUrl + apiUsersLogin, requestOptions)
         .then(response => response.json())
         .then(result => {
+            console.log(result);
             if (result.token) {
-                localStorage.setItem("jwt", result.token)
+                localStorage.setItem("token", result.token)
                 alert("usuario válido")
                 location.href = "/public/views/upload.html"
             } else {

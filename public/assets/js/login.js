@@ -9,7 +9,7 @@ formulario.addEventListener("submit", (e) => {
 
 });
 
-const apiBaseUrl = "http://localhost:3000";
+const apiBaseUrl = "https://api-manteca-y-harina.herokuapp.com";
 let apiUsersLogin = "/login";
 
 const loguinUserAndRedirect = () => {
@@ -27,7 +27,7 @@ const loguinUserAndRedirect = () => {
         redirect: 'follow'
     };
 
-    fetch(apiBaseUrl + apiUsersLogin, requestOptions)
+    fetch(`${apiBaseUrl}${apiUsersLogin}`, requestOptions)
         .then(response => response.json())
         .then(result => {
             console.log(result);

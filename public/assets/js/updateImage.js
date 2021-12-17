@@ -1,5 +1,5 @@
 /* Consumiendo la API */
-const apiBaseUrl = "http://localhost:3000";
+const apiBaseUrl = "https://api-manteca-y-harina.herokuapp.com";
 let apiUpload = "/update/";
 
 const updateImage = (form, image) => {

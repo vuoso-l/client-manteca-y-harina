@@ -10,13 +10,13 @@ const deleteImg = (images) => {
                 if (e.target.id == img.id) {
                     console.log(e.target.id);
                     console.log(img.id);
-                    const urlApi = "http://localhost:3000";
+                    const apiBaseUrl = "https://api-manteca-y-harina.herokuapp.com";
                     const urlDelete = "/delete/";
 
                     let settings = {
                         method: "DELETE",
                     }
-                    fetch(`${urlApi}${urlDelete}${img.id}`, settings)
+                    fetch(`${apiBaseUrl}${urlDelete}${img.id}`, settings)
                         .then((response) => response.json())
                         .catch(error => console.error('Error:', error))
                         .then((contenido) => {

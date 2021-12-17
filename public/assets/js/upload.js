@@ -13,7 +13,7 @@ form.addEventListener("submit", (e) => {
 closeSession();
 
 /* Consumiendo la API */
-const apiBaseUrl = "http://localhost:3000";
+const apiBaseUrl = "https://api-manteca-y-harina.herokuapp.com";
 let apiUpload = "/upload";
 
 const uploadImage = () => {
@@ -27,7 +27,7 @@ const uploadImage = () => {
         redirect: 'follow'
     };
 
-    fetch("http://localhost:3000/upload", requestOptions)
+    fetch(`${apiBaseUrl}${apiUpload}`, requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));

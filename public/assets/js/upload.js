@@ -1,26 +1,34 @@
 const form = document.querySelector("form");
-
+import {closeSession} from "./closeSession.js";
+let tokenJWT = localStorage.getItem("jwt");
+console.log(tokenJWT);
+//una vez funcione el bloqueo y acceso con el token
+//ver de armar el form con js para bloquear el acceso
+//si no se tiene el token
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    uploadImage();
+    uploadImage();    
 })
 
+closeSession();
+
 /* Consumiendo la API */
-const apiBaseUrl = "https://api-manteca-y-harina.herokuapp.com";
+const apiBaseUrl = "http://localhost:3000";
 let apiUpload = "/upload";
 
 const uploadImage = () => {
-    
-    let settings = {
-        method: "POST",
-        body: new FormData(form),
-    }
+    const myHeaders = new Headers();
+    myHeaders.append("authorization", `Bearer ${tokenJWT}`);
 
-    fetch(apiBaseUrl + apiUpload, settings)
-        .then((response) => response.json())
-        .catch(error => console.error('Error:', error))
-        .then((contenido) => {
-            console.log('Success:', contenido);
-            location.reload();
-        })
+    const requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: new FormData(form),
+        redirect: 'follow'
+    };
+
+    fetch("http://localhost:3000/upload", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
 }

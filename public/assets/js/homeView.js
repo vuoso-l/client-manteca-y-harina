@@ -2,7 +2,7 @@ import { selectImgGallery } from "./selectImgGallery.js";
 
 const containerSkeleton = document.querySelector(".skeleton-container");
 const container = document.querySelector(".container");
-const urlApi = "https://api-manteca-y-harina.herokuapp.com";
+const urlApi = "http://localhost:3000";
 
 fetch(urlApi + "/images")
     .then((response) => response.json())

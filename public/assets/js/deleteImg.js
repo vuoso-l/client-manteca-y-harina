@@ -10,7 +10,7 @@ const deleteImg = (images) => {
                 if (e.target.id == img.id) {
                     console.log(e.target.id);
                     console.log(img.id);
-                    const urlApi = "https://api-manteca-y-harina.herokuapp.com";
+                    const urlApi = "http://localhost:3000";
                     const urlDelete = "/delete/";
 
                     let settings = {

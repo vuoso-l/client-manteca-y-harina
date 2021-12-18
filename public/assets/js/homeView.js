@@ -37,6 +37,7 @@ fetch(`${apiBaseUrl}${urlGetImages}`)
     })
     .catch(error => {
         console.error('Error:', error)
+        containerSkeleton.style.display = "none";
         container.innerHTML = `
             <section>
                 <p>Inconvenientes técnicos, surgió un error inesperado</p>

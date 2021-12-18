@@ -1,0 +1,18 @@
+.showErrors {
+  color: red;
+  font-size: 12px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .showErrors {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .showErrors {
+    font-size: 18px;
+  }
+}

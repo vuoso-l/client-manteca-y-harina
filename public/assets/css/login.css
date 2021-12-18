@@ -21,6 +21,7 @@ form {
   border: 2px solid #ff6701;
   border-radius: 10px;
   font-size: 14px;
+  width: 80%;
 }
 
 form div {
@@ -50,24 +51,49 @@ input {
   border-radius: 5px;
 }
 
+.containerLogin ul {
+  padding-left: 0;
+}
+
 .btnLogin {
   margin: 1px 0;
   font-size: 14px;
   background-color: blue;
 }
 
+@media (min-width: 540px) {
+  .containerLogin ul {
+    max-width: 60%;
+  }
+}
+
 @media (min-width: 768px) {
-  h2{
+  h2 {
     font-size: 40px;
   }
   form {
     font-size: 18px;
-    padding: 20px 100px;
+    padding: 20px 0;
+    width: 60%;
+  }
+  .btnLogin {
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1024px) {
   form {
     font-size: 20px;
+    padding: 70px 0;
+  }
+  .btnLogin {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  form {
+    font-size: 24px;
+    padding: 100px 0;
   }
 }

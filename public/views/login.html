@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../assets/css/estilosGenerales.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/showError.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
 </head>
 
@@ -53,10 +54,12 @@
                 <div>
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email">
+                    <ul id="emailError"></ul>
                 </div>
                 <div>
                     <label for="password">Contraseña</label>
                     <input type="password" name="password" id="password">
+                    <ul id="passError"></ul>
                 </div>
                 <div>
                     <button class="btnLogin" type="submit">Iniciar sesión</button>

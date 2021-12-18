@@ -1,7 +1,15 @@
 import { loguinUserAndRedirect } from "./loginUserAndRedirect.js";
+import { emailNotValid, passNotValid, showErrorEmail, showErrorPass } from "./showError.js";
 const formulario = document.querySelector(".formLogin");
+const email = document.querySelector("#email");
+const password = document.querySelector("#password");
 
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
-    loguinUserAndRedirect();
+    if (emailNotValid(email.value) || passNotValid(password.value)) {
+        showErrorEmail();
+        showErrorPass();
+    } else {
+        loguinUserAndRedirect();        
+    }
 });

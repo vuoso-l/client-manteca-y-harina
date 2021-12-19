@@ -19,6 +19,10 @@ const uploadImage = () => {
         .then(response => response.json())
         .then(result => {
             console.log(result);
+            Swal.fire({
+                icon: 'success',
+                title: `${result}`,
+            })
             setTimeout(() => {                
                 location.reload();
             }, 4000);

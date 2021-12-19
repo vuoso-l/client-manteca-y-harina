@@ -1,20 +1,23 @@
 const container = document.querySelector(".containerUpload");
 
-const createForm = (image) => {
+const createFormUpdateImage = (image) => {
     container.innerHTML = `
             <form method="PUT" enctype="multipart/form-data">
                 <div>
-                    <label for="image">Cargar imagen</label>
-                    <input type="file" name="image" id="image">
+                    <label for="imageUpdate">Cargar imagen</label>
+                    <input type="file" name="imageUpdate" id="imageUpdate">
+                    <ul id="imageUpdateError"></ul>
                 </div>
                 <div>
                     <label for="title">Título</label>
                     <input type="text" name="title" id="title" autofocus value="${image.title}">
-                </div>
+                    <ul id="titleUpdateError"></ul>
+                    </div>
                 <div>
                     <label for="description">Descripción</label>
                     <textarea name="description" id="description" cols="40" rows="5" autofocus>${image.description}</textarea>
-                </div>
+                    <ul id="descriptionUpdateError"></ul>
+                    </div>
                 <div>
                     <label for="section">Temática</label>
                     <select name="section" id="section">
@@ -31,6 +34,7 @@ const createForm = (image) => {
                         <option value="alfajores">Sección para alfajores</option>
                         <option value="porcelanaFria">Sección para porcelana fría</option>
                     </select>
+                    <ul id="sectionUpdateError"></ul>
                 </div>
                 <div>
                     <label for="thematic">Temática</label>
@@ -47,6 +51,7 @@ const createForm = (image) => {
                         <option value="alfajores">Sección para alfajores</option>
                         <option value="porcelanaFria">Sección para porcelana fría</option>
                     </select>
+                    <ul id="thematicUpdateError"></ul>
                 </div>
                 <div>
                     <button class="btnPut" type="submit">Actualizar imagen</button>
@@ -56,4 +61,4 @@ const createForm = (image) => {
                 `
 }
 
-export { createForm };
+export { createFormUpdateImage };

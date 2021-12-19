@@ -12,7 +12,14 @@ const updateImage = (form, image) => {
         .then((response) => {
             console.log(response.json());
         })
-        .catch(error => console.error('Error:', error))
+        .catch(error => {
+            console.error('Error:', error)
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...algo salió mal',
+                text: `${error}`,
+            })
+        })
         .then((contenido) => {
             console.log(contenido);
             location = "/public/views/upload.html"

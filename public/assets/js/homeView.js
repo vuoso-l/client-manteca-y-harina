@@ -33,7 +33,7 @@ fetch(`${apiBaseUrl}${urlGetImages}`)
             </section>   
             `;
         }
-        selectImgGallery(image);        
+        selectImgGallery(image);
     })
     .catch(error => {
         console.error('Error:', error)

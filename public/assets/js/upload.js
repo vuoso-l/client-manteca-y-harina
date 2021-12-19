@@ -1,7 +1,13 @@
-const containerUpload = document.querySelector(".containerUpload");
-const form = document.querySelector("form");
 import { closeSession } from "./closeSession.js";
 import { uploadImage } from "./uploadImage.js";
+import * as error from "./showUploadError.js";
+const containerUpload = document.querySelector(".containerUpload");
+const form = document.querySelector("form");
+const image = document.querySelector("#image");
+const title = document.querySelector("#title");
+const description = document.querySelector("#description");
+const section = document.querySelector("#section");
+const thematic = document.querySelector("#thematic");
 let tokenJWT = localStorage.getItem("token");
 
 onload = () => {
@@ -17,7 +23,15 @@ onload = () => {
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    uploadImage();
+    if (error.imageNotValid(image.value) || error.titleNotValid(title.value) || error.descriptionNotValid(description.value) || error.sectionNotValid(section.value) || error.thematicNotValid(thematic.value)) {
+        error.showErrorImage();
+        error.showErrorTitle();
+        error.showErrorDescription();
+        error.showErrorSection();
+        error.showErrorThematic();
+    } else {
+        uploadImage();
+    }
 })
 
 closeSession();

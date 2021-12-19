@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/upload.css">
     <link rel="stylesheet" href="../assets/css/imgError.css">
+    <link rel="stylesheet" href="../assets/css/showError.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
 </head>
 
@@ -55,14 +56,17 @@
                 <div>
                     <label for="image">Cargar imagen</label>
                     <input type="file" name="image" id="image">
+                    <ul id="imageError"></ul>
                 </div>
                 <div>
                     <label for="title">Título</label>
                     <input type="text" name="title" id="title" autofocus>
+                    <ul id="titleError"></ul>
                 </div>
                 <div>
                     <label for="description">Descripción</label>
                     <textarea name="description" id="description" cols="40" rows="5" autofocus></textarea>
+                    <ul id="descriptionError"></ul>
                 </div>
                 <div>
                     <label for="section">Sección</label>
@@ -80,6 +84,7 @@
                         <option value="alfajores">Sección para alfajores</option>
                         <option value="porcelanaFria">Sección para porcelana fría</option>
                     </select>
+                    <ul id="sectionError"></ul>
                 </div>
                 <div>
                     <label for="thematic">Temática</label>
@@ -96,6 +101,7 @@
                         <option value="alfajores">Sección para alfajores</option>
                         <option value="porcelanaFria">Sección para porcelana fría</option>
                     </select>
+                    <ul id="thematicError"></ul>
                 </div>
                 <div>
                     <button type="submit">Subir imagen</button>

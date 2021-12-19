@@ -19,17 +19,35 @@ const loguinUserAndRedirect = () => {
     fetch(`${apiBaseUrl}${apiUsersLogin}`, requestOptions)
         .then(response => response.json())
         .then(result => {
-            console.log(result);
             if (result.token) {
-                localStorage.setItem("token", result.token)
-                alert("usuario válido")
-                location.href = "/public/views/upload.html"
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Login correcto!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                localStorage.setItem("token", result.token);
+                location.href = "/public/views/upload.html";
             } else {
-                alert("No tienes una cuenta registrada")
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Email y/o contraseña incorrecta!',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
             }
 
         })
-        .catch(error => console.log('error', error));
+        .catch(error => {
+            console.error('Error:', error)
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...algo salió mal',
+                text: `${error}`,
+            })
+        })
 }
 
-export {loguinUserAndRedirect};
+export { loguinUserAndRedirect };

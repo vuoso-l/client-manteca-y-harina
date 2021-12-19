@@ -1,8 +1,8 @@
 const ulEmail = document.querySelector("#emailError");
 const ulPass = document.querySelector("#passError");
-let li = document.createElement("li");
-let errorEmail = [];
-let errorPass = [];
+const li = document.createElement("li");
+const errorEmail = [];
+const errorPass = [];
 
 /* Validaciones */
 const emailNotValid = (email) => {
@@ -22,9 +22,7 @@ const passNotValid = (password) => {
 const showErrorEmail = () => {
     if (errorEmail.length > 0) {
         errorEmail.forEach(error => {
-            li.innerHTML = "";
-            li.classList.add("showErrors");
-            li.appendChild(document.createTextNode(error));
+            createLiInput(error);
             ulEmail.appendChild(li);
             errorEmail.splice(0);
         })
@@ -33,14 +31,17 @@ const showErrorEmail = () => {
 const showErrorPass = () => {
     if (errorPass.length > 0) {
         errorPass.forEach(error => {
-            li.innerHTML = "";
-            li.classList.add("showErrors");
-            li.appendChild(document.createTextNode(error));
+            createLiInput(error);
             ulPass.appendChild(li);
             errorPass.splice(0);
         })
     }
 }
 
+const createLiInput = (error) => {
+    li.innerHTML = "";
+    li.classList.add("showErrors");
+    li.appendChild(document.createTextNode(error));
+}
 
 export { showErrorEmail, showErrorPass, emailNotValid, passNotValid };

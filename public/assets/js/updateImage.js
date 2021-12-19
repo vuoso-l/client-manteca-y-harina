@@ -20,8 +20,12 @@ const updateImage = (form, image) => {
         .then((response) => {
             response.json();
         })
-        .then((contenido) => {
-            console.log(contenido);
+        .then((result) => {
+            console.log(result);
+            Swal.fire({
+                icon: 'success',
+                title: `${result}`,
+            })
             setTimeout(() => {
                 location.href = "/public/views/upload.html"
             }, 4000);

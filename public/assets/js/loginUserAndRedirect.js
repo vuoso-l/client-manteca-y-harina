@@ -25,7 +25,7 @@ const loguinUserAndRedirect = () => {
                     icon: 'success',
                     title: 'Login correcto!',
                     showConfirmButton: false,
-                    timer: 1500
+                    timer: 3000
                 })
                 localStorage.setItem("token", result.token);
                 setTimeout(() => {
@@ -37,7 +37,7 @@ const loguinUserAndRedirect = () => {
                     icon: 'error',
                     title: 'Email y/o contraseña incorrecta!',
                     showConfirmButton: false,
-                    timer: 1500
+                    timer: 3000
                   })
             }
 

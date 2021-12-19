@@ -2,7 +2,7 @@ const container = document.querySelector(".containerUpload");
 
 const createFormUpdateImage = (image) => {
     container.innerHTML = `
-            <form method="PUT" enctype="multipart/form-data">
+            <form>
                 <div>
                     <label for="imageUpdate">Cargar imagen</label>
                     <input type="file" name="imageUpdate" id="imageUpdate">

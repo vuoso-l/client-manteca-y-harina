@@ -15,6 +15,13 @@ const uploadImage = () => {
         redirect: 'follow'
     };
 
+    if (TypeError) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...algo salió mal',
+            text: "Posiblemente haya expirado la sesión",
+        })
+    }
     fetch(`${apiBaseUrl}${apiUpload}`, requestOptions)
         .then(response => {
             response.json()

@@ -1,4 +1,3 @@
-import { showImageUpload } from "./showImageUpload.js";
 let tokenJWT = localStorage.getItem("token");
 
 const tbody = document.querySelector("tbody");
@@ -35,7 +34,6 @@ const deleteImg = (images) => {
                                     .then((response) => response.json())
                                     .then((contenido) => {
                                         console.log(contenido);
-                                        //showImageUpload(images);
                                         location.reload();
                                     })
                                     .catch(error => {

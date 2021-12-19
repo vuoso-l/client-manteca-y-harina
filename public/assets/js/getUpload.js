@@ -7,6 +7,16 @@ const urlGetImages = "/images";
 
 fetch(`${apiBaseUrl}${urlGetImages}`)
     .then((response) => response.json())
+    .then((contenido) => {
+        let images = contenido.image;
+        
+        showImageUpload(images);
+        
+        showUpdateImage(images);
+        
+        deleteImg(images);
+        
+    })
     .catch(error => {
         console.error('Error:', error);
         Swal.fire({
@@ -14,14 +24,4 @@ fetch(`${apiBaseUrl}${urlGetImages}`)
             title: 'Oops...algo salió mal',
             text: `${error}`,
         })
-    })
-    .then((contenido) => {
-        let images = contenido.image;
-
-        showImageUpload(images);
-
-        showUpdateImage(images);
-
-        deleteImg(images);
-
     })

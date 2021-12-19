@@ -1,16 +1,30 @@
-/* Consumiendo la API */
+let tokenJWT = localStorage.getItem("token");
+
 const apiBaseUrl = "https://api-manteca-y-harina.herokuapp.com";
-let apiUpload = "/update/";
+let apiUpate = "/update/";
 
 const updateImage = (form, image) => {
-    let settings = {
-        method: "PUT",
-        body: new FormData(form),
-    }
+    console.log(form);
+    console.log(image);
+    const myHeaders = new Headers();
+    myHeaders.append("authorization", `Bearer ${tokenJWT}`);
 
-    fetch(`${apiBaseUrl}${apiUpload}${image.id}`, settings)
+    const requestOptions = {
+        method: 'PUT',
+        headers: myHeaders,
+        body: new FormData(form),
+        redirect: 'follow'
+    };
+
+    fetch(`${apiBaseUrl}${apiUpate}${image.id}`, requestOptions)
         .then((response) => {
-            console.log(response.json());
+            response.json();
+        })
+        .then((contenido) => {
+            console.log(contenido);
+            setTimeout(() => {
+                location.href = "/public/views/upload.html"
+            }, 4000);
         })
         .catch(error => {
             console.error('Error:', error)
@@ -19,10 +33,6 @@ const updateImage = (form, image) => {
                 title: 'Oops...algo salió mal',
                 text: `${error}`,
             })
-        })
-        .then((contenido) => {
-            console.log(contenido);
-            location = "/public/views/upload.html"
         })
 }
 

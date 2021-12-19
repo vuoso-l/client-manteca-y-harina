@@ -1,4 +1,5 @@
 import { showImageUpload } from "./showImageUpload.js";
+let tokenJWT = localStorage.getItem("token");
 
 const tbody = document.querySelector("tbody");
 
@@ -8,8 +9,6 @@ const deleteImg = (images) => {
         element.addEventListener("click", (e) => {
             images.forEach(img => {
                 if (e.target.id == img.id) {
-                    console.log(e.target.id);
-                    console.log(img.id);
                     Swal.fire({
                         icon: 'question',
                         title: `¿Querés eliminar la imagen <-${img.title}-> ?`,
@@ -23,11 +22,22 @@ const deleteImg = (images) => {
                             if (result.isConfirmed) {
                                 const apiBaseUrl = "https://api-manteca-y-harina.herokuapp.com";
                                 const urlDelete = "/delete/";
+                                const myHeaders = new Headers();
+                                myHeaders.append("authorization", `Bearer ${tokenJWT}`);
+
                                 let settings = {
                                     method: "DELETE",
+                                    headers: myHeaders,
+                                    redirect: 'follow'
                                 }
+
                                 fetch(`${apiBaseUrl}${urlDelete}${img.id}`, settings)
                                     .then((response) => response.json())
+                                    .then((contenido) => {
+                                        console.log(contenido);
+                                        //showImageUpload(images);
+                                        location.reload();
+                                    })
                                     .catch(error => {
                                         console.error('Error:', error)
                                         Swal.fire({
@@ -35,11 +45,6 @@ const deleteImg = (images) => {
                                             title: 'Oops...algo salió mal',
                                             text: `${error}`,
                                         })
-                                    })
-                                    .then((contenido) => {
-                                        console.log(contenido);
-                                        //showImageUpload(images);
-                                        location.reload();
                                     })
                             }
                         })

@@ -14,17 +14,14 @@ const uploadImage = () => {
         body: new FormData(form),
         redirect: 'follow'
     };
-
-    if (TypeError) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...algo salió mal',
-            text: "Posiblemente haya expirado la sesión",
-        })
-    }
+    
     fetch(`${apiBaseUrl}${apiUpload}`, requestOptions)
-        .then(response => {
-            response.json()
+        .then(response => response.json())
+        .then(result => {
+            console.log(result);
+            setTimeout(() => {                
+                location.reload();
+            }, 4000);
         })
         .catch(error => {
             console.error('Error:', error)
@@ -34,7 +31,6 @@ const uploadImage = () => {
                 text: `${error}`,
             })
         })
-        .then(result => console.log(result))
-}
+    }
 
 export { uploadImage };

@@ -28,7 +28,9 @@ const loguinUserAndRedirect = () => {
                     timer: 1500
                 })
                 localStorage.setItem("token", result.token);
-                location.href = "/public/views/upload.html";
+                setTimeout(() => {
+                    location.href = "/public/views/upload.html";                    
+                }, 4000);
             } else {
                 Swal.fire({
                     position: 'top-end',

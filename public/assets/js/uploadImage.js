@@ -22,6 +22,8 @@ const uploadImage = () => {
             Swal.fire({
                 icon: 'success',
                 title: `${result}`,
+                showConfirmButton: false,
+                timer: 3000,
             })
             setTimeout(() => {                
                 location.reload();

@@ -14,7 +14,7 @@ const showUpdateImage = (image) => {
                     createFormUpdateImage(imaUpd);
 
                     const form = container.querySelector("form");
-                    const imageInput = document.querySelector("#imageUpdate");
+                    const imageInput = document.querySelector("#image");
                     const title = document.querySelector("#title");
                     const description = document.querySelector("#description");
                     const section = document.querySelector("#section");

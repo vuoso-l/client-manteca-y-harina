@@ -4,8 +4,8 @@ const createFormUpdateImage = (image) => {
     container.innerHTML = `
             <form>
                 <div>
-                    <label for="imageUpdate">Cargar imagen</label>
-                    <input type="file" name="imageUpdate" id="imageUpdate">
+                    <label for="image">Cargar imagen</label>
+                    <input type="file" name="image" id="image">
                     <ul id="imageUpdateError"></ul>
                 </div>
                 <div>

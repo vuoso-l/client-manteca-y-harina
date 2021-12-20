@@ -1,12 +1,12 @@
 let tokenJWT = localStorage.getItem("token");
 
-const apiBaseUrl = "https://api-manteca-y-harina.herokuapp.com";
+const apiBaseUrl = "http://localhost:3000";
 const apiUpdate = "/update";
 
 const updateImage = (form, image) => {
     const myHeaders = new Headers();
     myHeaders.append("authorization", `Bearer ${tokenJWT}`);
-    
+
     const requestOptions = {
         method: 'PUT',
         headers: myHeaders,
@@ -15,24 +15,26 @@ const updateImage = (form, image) => {
     };
 
     fetch(`${apiBaseUrl}${apiUpdate}/${image.id}`, requestOptions)
-        .then((response) => response.text())
+        .then((response) => response.json())
         .then((result) => {
             console.log(result);
-            /* Swal.fire({
+            Swal.fire({
                 icon: 'success',
                 title: `${result}`,
-            }) */
-            /* setTimeout(() => {
+                showConfirmButton: false,
+                timer: 3000,
+            })
+            setTimeout(() => {
                 location.href = "/public/views/upload.html"
-            }, 4000); */
+            }, 4000);
         })
         .catch(error => {
             console.error('error', error)
-            /* Swal.fire({
+            Swal.fire({
                 icon: 'error',
                 title: 'Oops...algo salió mal',
                 text: `${error}`,
-            }) */
+            })
         })
 }
 

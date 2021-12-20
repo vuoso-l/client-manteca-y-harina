@@ -1,6 +1,6 @@
 let tokenJWT = localStorage.getItem("token");
 
-const apiBaseUrl = "http://localhost:3000";
+const apiBaseUrl = "https://api-manteca-y-harina.herokuapp.com";
 const apiUpdate = "/update";
 
 const updateImage = (form, image) => {

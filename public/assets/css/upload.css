@@ -126,12 +126,18 @@ tbody tr:nth-child(odd) {
 }
 
 @media (min-width: 768px) {
+  #closeSession {
+    font-size: 20px;
+  }
   td {
     font-size: 16px;
   }
 }
 
 @media (min-width: 1024px) {
+  #closeSession {
+    font-size: 22px;
+  }
   form {
     font-size: 18px;
     padding: 20px 100px;

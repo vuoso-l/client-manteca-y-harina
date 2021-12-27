@@ -2,25 +2,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px;
+  padding: 20px;
   /* border: 2px solid rgb(190, 83, 56); */
-  border: 2px solid #FF6701;
+  border: medium solid #ff6701;
+  box-shadow: 3px 3px 10px grey;
   margin: 20px;
 }
 
-h2 {
+.containerContacto h2 {
   font-size: 36px;
   text-shadow: 4px 4px 8px grey;
   padding-bottom: 20px;
 }
 
-.texto{
+.texto {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.containerContacto ul{
+.texto p {
+  text-align: center;
+}
+
+.texto ul {
   padding: 0;
 }
 
@@ -58,9 +63,9 @@ h2 {
 
 @media (min-width: 768px) {
   .containerContacto {
-    margin: 70px 100px;
+    width: 70%;
   }
-  .containerContacto p {
+  .texto p {
     width: 80%;
     text-align: center;
   }
@@ -68,9 +73,13 @@ h2 {
 
 @media (min-width: 1024px) {
   .containerContacto {
-    margin: 80px 150px;
-  }
-  .containerContacto p {
     width: 60%;
+  }
+  .texto p {
+    width: 60%;
+  }
+  .texto p,
+  .texto ul {
+    font-size: 20px;
   }
 }

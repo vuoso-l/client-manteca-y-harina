@@ -59,9 +59,6 @@ section {
 }
 
 @media (min-width: 1024px) {
-  main {
-    padding-top: 50px;
-  }
   section {
     margin: 20px 10px;
   }

@@ -12,11 +12,21 @@
   background-size: cover;
   border-radius: 50%;
   /* box-shadow: -8px 1px 2px 2px rgb(190, 83, 56); */
-  box-shadow: -8px 1px 2px 2px #FF6701;
+  box-shadow: -8px 1px 2px 2px #ff6701;
   margin-bottom: 20px;
 }
 
-.containerAbout p{
+.containerAbout section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: medium solid #ff6701;
+  box-shadow: 3px 3px 10px grey;
+}
+
+.containerAbout section p {
+  padding: 10px;
   text-align: justify;
 }
 
@@ -30,8 +40,12 @@
   .fotoPerfil {
     width: 23%;
   }
-  .containerAbout p {
-    width: 65%;
+  .containerAbout section {
+    width: 75%;
+  }
+  .containerAbout section p{
+    padding-top: 20px;
+    width: 80%;
   }
 }
 
@@ -40,7 +54,10 @@
     height: 250px;
     width: 20%;
   }
-  .containerAbout p {
-    width: 50%;
+  .containerAbout section {
+    width: 60%;
+  }
+  .containerAbout section p {
+    font-size: 20px;
   }
 }

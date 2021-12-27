@@ -1,5 +1,5 @@
 /* Importo fuente desde fonts google*/
-@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
 
 * {
   margin: 0;
@@ -7,11 +7,17 @@
   box-sizing: border-box;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 body {
   /* background: radial-gradient(#fada5e, #f69d3c); */
   /* background: radial-gradient(#FFE194, #FFB319); */
   /* background-color: #ffea76; */
-  font-family: 'Alice', serif;
+  font-family: "Alice", serif;
 }
 
 img {
@@ -34,4 +40,10 @@ h2:first-letter,
 h3::first-letter,
 p:first-letter {
   text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding-top: 50px;
+  }
 }

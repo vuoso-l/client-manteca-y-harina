@@ -14,15 +14,16 @@ main {
 .skeleton-animation {
   animation: loadingAnimation 1.5s infinite;
 }
+
 .skeleton {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%;
   padding: 20px;
-  border: medium solid #ff6701;
   box-shadow: 3px 3px 10px grey;
   margin: 10px;
+  animation: sectionAnimation 1.5s infinite;
 }
 
 .skeleton h2 {
@@ -45,15 +46,27 @@ main {
   border-radius: 10px;
 }
 
-@keyframes loadingAnimation {
+@keyframes sectionAnimation {
   0% {
-    background: radial-gradient(#ffe194, #ffb319);
+    box-shadow: 0 0 0 white;
   }
   50% {
-    background: radial-gradient(#ffb319, #ffe194);
+    box-shadow: 3px 3px 10px grey;
   }
   100% {
-    background: radial-gradient(#ffe194, #ffb319);
+    box-shadow: 0 0 0 white;
+  }
+}
+
+@keyframes loadingAnimation {
+  0% {
+    background: white;
+  }
+  50% {
+    background: radial-gradient(rgb(153, 153, 153), #d6d6d6);
+  }
+  100% {
+    background: white;
   }
 }
 
@@ -68,13 +81,22 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .skeleton{
+  .skeleton {
     width: 47%;
   }
 }
 
 @media (min-width: 1024px) {
   .skeleton {
-    width: 30%;
+    margin: 20px 10px;
+  }
+  .imgSkeleton {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .skeleton {
+    margin: 20px 15px;
   }
 }

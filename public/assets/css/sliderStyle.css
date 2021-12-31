@@ -5,13 +5,18 @@
   padding: 85px 50px;
 }
 
-/* Hide the images by default */
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
 .mySlides {
   width: 100%;
   display: none;
 }
 
-.gallery-title{
+.gallery-title {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,43 +37,50 @@
   border-radius: 15px;
 }
 
-.btnGallery {
-  display: flex;
-  justify-content: space-around;
+.gallery-image img {
+  border-radius: 50%;
 }
 
-/* Next & previous buttons */
+.gallery-image img:hover {
+  box-shadow: 4px 4px 8px grey;
+  border-radius: 10%;
+}
+
 .prev,
 .next {
   cursor: pointer;
   padding: 16px;
-  color: white;
+  color: black;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+.prev {
+  border-radius: 3px 0 0 3px;
+}
+
+.next {
+  border-radius: 0 3px 3px 0;
+}
+
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption text */
 .text {
-  color: #f2f2f2;
+  color: black;
   font-size: 20px;
   padding: 8px 12px;
   text-align: center;
 }
 
-.dotContainer{
+.dotContainer {
   text-align: center;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -85,7 +97,6 @@
   background-color: #4d4d4d;
 }
 
-/* Fading animation */
 .fades {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -115,38 +126,33 @@
   .gallery-title h2 {
     font-size: 32px;
   }
-  .gallery-title a{
+  .gallery-title a {
     font-size: 20px;
   }
-  .gallery{
+  .gallery-image {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
-  .mySlides {
-    width: 70%;
-}
 }
 
 @media (min-width: 768px) {
   .gallery-title h2 {
     font-size: 36px;
   }
-  .gallery-title a{
+  .gallery-title a {
     font-size: 24px;
   }
-  .gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .mySlides {
+  .gallery-image {
     width: 60%;
   }
-  .text{
+  .text {
     font-size: 26px;
   }
-  .dotContainer{
+  .prev,
+  .next {
+    font-size: 26px;
+  }
+  .dotContainer {
     padding-top: 20px;
   }
 }
@@ -155,16 +161,14 @@
   .gallery-title h2 {
     font-size: 42px;
   }
-  .gallery-title a{
+  .gallery-title a {
     font-size: 24px;
   }
-  .btnGallery {
-    justify-content: space-evenly;
+  .prev,
+  .next {
+    font-size: 32px;
   }
-  .mySlides {
-    width: 40%;
-  }
-  .dotContainer{
+  .dotContainer {
     padding-top: 50px;
   }
 }

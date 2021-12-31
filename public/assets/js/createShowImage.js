@@ -1,8 +1,7 @@
 const container = document.querySelector(".container");
 const containerGallery = document.querySelector(".gallery-container");
 const galleryTitle = document.querySelector(".gallery-title");
-const h2 = document.querySelector(".gallery-container h2");
-const gallery = document.querySelector(".gallery");
+const galleryImage = document.querySelector(".gallery-image");
 const dotContainer = document.querySelector(".dotContainer");
 
 const createShowImage = (images) => {
@@ -14,7 +13,7 @@ const createShowImage = (images) => {
     <a href="./index.html">Volver</a>
     `
 
-    gallery.innerHTML += `    
+    galleryImage.innerHTML += `    
     <div class="mySlides fades">
         <img src="${images.imageURL}" alt="${images.name}">
         <div class ="text">${images.title}</div>

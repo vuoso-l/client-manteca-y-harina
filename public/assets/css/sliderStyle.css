@@ -2,7 +2,7 @@
 .gallery-container {
   display: none;
   flex-direction: column;
-  padding: 85px 50px;
+  padding: 50px 50px;
 }
 
 .gallery {
@@ -163,6 +163,16 @@
   }
   .gallery-title a {
     font-size: 24px;
+  }
+  .gallery {
+    justify-content: space-between;
+  }
+  .gallery-image {
+    width: 100%;
+    height: 500px;
+  }
+  .gallery-image img {
+    height: 500px;
   }
   .prev,
   .next {

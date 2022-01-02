@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: baseline;
+  padding-bottom: 10px;
 }
 
 .mySlides {
@@ -20,7 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .gallery-title h2 {
@@ -79,12 +80,13 @@
 
 .dotContainer {
   text-align: center;
+  padding-top: 10px;
 }
 
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
@@ -133,6 +135,10 @@
     display: flex;
     flex-direction: column;
   }
+  .dot {
+    height: 15px;
+    width: 15px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -151,9 +157,6 @@
   .prev,
   .next {
     font-size: 26px;
-  }
-  .dotContainer {
-    padding-top: 20px;
   }
 }
 
@@ -178,7 +181,8 @@
   .next {
     font-size: 32px;
   }
-  .dotContainer {
-    padding-top: 50px;
+  .dot {
+    height: 18px;
+    width: 18px;
   }
 }

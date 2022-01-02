@@ -16,7 +16,6 @@ const createShowImage = (images) => {
     galleryImage.innerHTML += `    
     <div class="mySlides fades">
         <img src="${images.imageURL}" alt="${images.name}">
-        <div class ="text">${images.title}</div>
     </div>
     `
 

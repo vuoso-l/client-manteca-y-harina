@@ -27,7 +27,7 @@ const loguinUserAndRedirect = () => {
                     showConfirmButton: false,
                     timer: 3000
                 })
-                localStorage.setItem("token", result.token);
+                localStorage.setItem("tokenM&H", result.token);
                 setTimeout(() => {
                     location.href = "/public/views/upload.html";                    
                 }, 4000);

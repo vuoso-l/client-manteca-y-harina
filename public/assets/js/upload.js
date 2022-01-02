@@ -9,7 +9,7 @@ const title = document.querySelector("#title");
 const description = document.querySelector("#description");
 const section = document.querySelector("#section");
 const thematic = document.querySelector("#thematic");
-let tokenJWT = localStorage.getItem("token");
+let tokenJWT = localStorage.getItem("tokenM&H");
 
 onload = () => {
     if (!tokenJWT) {

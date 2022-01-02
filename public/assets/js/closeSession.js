@@ -12,7 +12,7 @@ const closeSession = () => {
             cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.isConfirmed) {
-                localStorage.removeItem("token");
+                localStorage.removeItem("tokenM&H");
                 location.href = "../../../index.html";
             }
         })

@@ -1,4 +1,4 @@
-let tokenJWT = localStorage.getItem("token");
+let tokenJWT = localStorage.getItem("tokenM&H");
 
 const apiBaseUrl = "https://api-manteca-y-harina.herokuapp.com";
 const apiUpdate = "/update";

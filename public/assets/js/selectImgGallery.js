@@ -57,7 +57,7 @@ const selectImgGallery = (image) => {
                         }
                         break;
                     default:
-                        containerGallery.innerHTML = `
+                        container.innerHTML = `
                             <section>
                                 <p>Inconvenientes técnicos, no se puede acceder a las imágenes</p>
                                 <p>Disculpen las molestias!</p>

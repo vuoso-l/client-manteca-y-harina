@@ -1,6 +1,7 @@
 import { closeSession } from "./closeSession.js";
 import { uploadImage } from "./uploadImage.js";
 import * as error from "./showUploadError.js";
+const btnCloseSesion = document.querySelector("#closeSession");
 const containerUpload = document.querySelector(".containerUpload");
 const form = document.querySelector("form");
 const image = document.querySelector("#image");
@@ -12,6 +13,7 @@ let tokenJWT = localStorage.getItem("token");
 
 onload = () => {
     if (!tokenJWT) {
+        btnCloseSesion.style.display = "none";
         containerUpload.innerHTML = `
             <section>
                 <p>No tienes acceso a esta sección!</p>

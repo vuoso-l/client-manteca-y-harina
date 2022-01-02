@@ -16,9 +16,10 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 5px;
+  padding: 10px;
   /* border: 2px solid rgb(190, 83, 56); */
   border: 2px solid #ff6701;
+  box-shadow: 3px 3px 10px grey;
   border-radius: 10px;
   font-size: 14px;
   width: 80%;
@@ -62,6 +63,9 @@ input {
 }
 
 @media (min-width: 540px) {
+  form {
+    width: 60%;
+  }
   .containerLogin ul {
     max-width: 60%;
   }
@@ -73,8 +77,6 @@ input {
   }
   form {
     font-size: 18px;
-    padding: 20px 0;
-    width: 60%;
   }
   .btnLogin {
     font-size: 18px;
@@ -84,7 +86,8 @@ input {
 @media (min-width: 1024px) {
   form {
     font-size: 20px;
-    padding: 70px 0;
+    padding: 50px 0px;
+    width: 70%;
   }
   .btnLogin {
     font-size: 20px;
@@ -95,5 +98,6 @@ input {
   form {
     font-size: 24px;
     padding: 100px 0;
+    width: 85%;
   }
 }

@@ -18,7 +18,6 @@ fetch(`${apiBaseUrl}${urlGetImages}`)
                     <h2>${element.thematic}</h2>
                     <img class="small_img" title="${element.thematic}" src="${element.imageURL}"
                         alt="${element.name}">
-                    <p>${element.description}</p> 
                 </section>   
                 `;
                 }

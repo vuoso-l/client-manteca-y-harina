@@ -15,7 +15,7 @@ fetch(`${apiBaseUrl}${urlGetImages}`)
                 if (element.section == "HOME") {
                     container.innerHTML += `
                 <section>                
-                    <h2>${element.thematic}</h2>
+                    <h2>${element.thematic.replace("-", " ")}</h2>
                     <img class="small_img" title="${element.thematic}" src="${element.imageURL}"
                         alt="${element.name}">
                 </section>   

@@ -15,8 +15,8 @@ onload = () => {
     if (!tokenJWT) {
         btnCloseSesion.style.display = "none";
         containerUpload.innerHTML = `
-            <section>
-                <p>No tienes acceso a esta sección!</p>
+            <section class="sectionImgError">
+                <h2>No tienes acceso a esta sección!</h2>
                 <img class="imgError" src="/public/assets/imgMyH/logo.jpg" alt="Logo m&h"></img>
             </section>   
             `;

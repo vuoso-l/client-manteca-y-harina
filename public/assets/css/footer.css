@@ -39,7 +39,7 @@ a {
 .paymentMethods h3::before,
 .others h3::before,
 .send h3::before,
-li::before {
+.importantData li::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   padding-right: 10px;
@@ -59,7 +59,7 @@ li::before {
   content: "\f291";
 }
 
-li::before {
+.importantData li::before {
   content: "\f564";
   color: #ffeb73
 }
@@ -94,7 +94,7 @@ li::before {
   .paymentMethods h3::before,
   .others h3::before,
   .send h3::before,
-  li::before {
+  .importantData li::before {
     font-size: 26px;
   }
   a,
@@ -113,7 +113,7 @@ li::before {
   .paymentMethods h3::before,
   .others h3::before,
   .send h3::before,
-  li::before {
+  .importantData li::before {
     font-size: 30px;
   }
   a,
@@ -129,7 +129,7 @@ li::before {
   .paymentMethods h3::before,
   .others h3::before,
   .send h3::before,
-  li::before {
+  .importantData li::before {
     font-size: 32px;
   }
   a,

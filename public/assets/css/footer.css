@@ -6,13 +6,62 @@ footer {
   padding: 15px 0;
 }
 
+.importantData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.send,
+.paymentMethods,
+.others {
+  width: 80%;
+  padding: 10px;
+}
+
+.importantData ul {
+  padding: 0;
+  margin: 0;
+}
+
 h3 {
   font-size: 16px;
-  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 a {
   padding: 10px;
+}
+
+.paymentMethods h3::before,
+.others h3::before,
+.send h3::before,
+li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  padding-right: 10px;
+  color: #ff6701;
+  font-size: 20px;
+}
+
+.send h3::before {
+  content: "\f5b6";
+}
+
+.paymentMethods h3::before {
+  content: "\f788";
+}
+
+.others h3::before {
+  content: "\f291";
+}
+
+li::before {
+  content: "\f564";
+  color: #ffeb73
 }
 
 .redSocial1::after {
@@ -29,13 +78,62 @@ a {
   color: rgb(61, 131, 197);
 }
 
+@media (min-width: 540px) {
+  .importantData {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+    width: 100%;
+  }
+}
+
 @media (min-width: 768px) {
   h3 {
     font-size: 20px;
-    color: black;
   }
-
-  a {
+  .paymentMethods h3::before,
+  .others h3::before,
+  .send h3::before,
+  li::before {
+    font-size: 26px;
+  }
+  a,
+  li {
     font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .importantData {
+    width: 90%;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  .paymentMethods h3::before,
+  .others h3::before,
+  .send h3::before,
+  li::before {
+    font-size: 30px;
+  }
+  a,
+  li {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1280px) {
+  h3 {
+    font-size: 26px;
+  }
+  .paymentMethods h3::before,
+  .others h3::before,
+  .send h3::before,
+  li::before {
+    font-size: 32px;
+  }
+  a,
+  li {
+    font-size: 24px;
   }
 }

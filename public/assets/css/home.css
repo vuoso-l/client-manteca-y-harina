@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
   padding: 20px;
   box-shadow: 3px 3px 10px grey;
   border-radius: 20px;
@@ -40,13 +41,16 @@
 }
 
 @media (min-width: 375px) {
+  .container section {
+    width: 80%;
+  }
   .small_img {
     height: 270px;
   }
 }
 
 @media (min-width: 540px) {
-  section {
+  .container section {
     width: 70%;
   }
   .small_img {
@@ -65,13 +69,13 @@
     text-shadow: 4px 4px 8px grey;
     font-size: 30px;
   }
-  section {
+  .container section {
     width: 47%;
   }
 }
 
 @media (min-width: 1024px) {
-  section {
+  .container section {
     margin: 20px 10px;
   }
   .small_img {
@@ -81,7 +85,7 @@
 }
 
 @media (min-width: 1280px) {
-  section {
+  .container section {
     margin: 20px 15px;
   }
 }

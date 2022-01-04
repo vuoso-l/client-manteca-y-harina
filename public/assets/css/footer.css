@@ -1,9 +1,16 @@
-footer {
+footer, .links {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+footer {  
   background-color: #f9fafb;
   padding: 15px 0;
+}
+
+footer h2 {
+  font-size: 26px;
 }
 
 .importantData {
@@ -18,21 +25,24 @@ footer {
 .others {
   width: 80%;
   padding: 10px;
+  text-align: center;
 }
 
 .importantData ul {
   padding: 0;
   margin: 0;
+  text-align: start;
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   padding-bottom: 10px;
 }
 
-a {
+.redes a {
+  font-size: 18px;
   padding: 10px;
 }
 
@@ -79,7 +89,7 @@ a {
 }
 
 @media (min-width: 540px) {
-  .importantData {
+  .importantData, .links {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: baseline;
@@ -88,8 +98,11 @@ a {
 }
 
 @media (min-width: 768px) {
+  footer h2 {
+    font-size: 30px;
+  }
   h3 {
-    font-size: 20px;
+    font-size: 24px;
   }
   .paymentMethods h3::before,
   .others h3::before,
@@ -97,18 +110,21 @@ a {
   .importantData li::before {
     font-size: 26px;
   }
-  a,
-  li {
-    font-size: 18px;
+  .redes a,
+  .importantData li {
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1024px) {
+  footer h2 {
+    font-size: 32px;
+  }
   .importantData {
     width: 90%;
   }
   h3 {
-    font-size: 24px;
+    font-size: 28px;
   }
   .paymentMethods h3::before,
   .others h3::before,
@@ -116,24 +132,17 @@ a {
   .importantData li::before {
     font-size: 30px;
   }
-  a,
-  li {
-    font-size: 22px;
+  .redes a,
+  .importantData li {
+    font-size: 24px;
   }
 }
 
 @media (min-width: 1280px) {
-  h3 {
-    font-size: 26px;
-  }
   .paymentMethods h3::before,
   .others h3::before,
   .send h3::before,
   .importantData li::before {
     font-size: 32px;
-  }
-  a,
-  li {
-    font-size: 24px;
   }
 }

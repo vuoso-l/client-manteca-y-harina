@@ -30,11 +30,11 @@ const updateImage = (form, image) => {
           icon: "success",
           title: `${result}`,
           showConfirmButton: false,
-          timer: 3000,
+          timer: 4000,
         });
-        /* setTimeout(() => {
-                    location.href = "/public/views/upload.html"
-                }, 4000); */
+        setTimeout(() => {
+          location.reload();
+        }, 5000);
       }
     })
     .catch((error) => {

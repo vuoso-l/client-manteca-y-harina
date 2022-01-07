@@ -31,11 +31,11 @@ const uploadImage = () => {
           icon: "success",
           title: `${result}`,
           showConfirmButton: false,
-          timer: 3000,
+          timer: 4000,
         });
         setTimeout(() => {
           location.reload();
-        }, 4000);
+        }, 5000);
       }
     })
     .catch((error) => {

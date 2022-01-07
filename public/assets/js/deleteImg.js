@@ -40,7 +40,15 @@ const deleteImg = (images) => {
                       timer: 3000,
                     });
                   } else {
-                    location.reload();
+                    Swal.fire({
+                      icon: "success",
+                      title: `${result}`,
+                      showConfirmButton: false,
+                      timer: 4000,
+                    });
+                    setTimeout(() => {
+                      location.reload();
+                    }, 5000);
                   }
                 })
                 .catch((error) => {

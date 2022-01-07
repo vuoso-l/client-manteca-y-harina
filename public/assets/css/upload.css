@@ -10,6 +10,7 @@ form {
 .containerUpload,
 .containerTable {
   padding: 50px 0;
+  max-width: 100%;
 }
 
 h2 {
@@ -24,6 +25,7 @@ form {
   border: 2px solid #ff6701;
   border-radius: 10px;
   font-size: 14px;
+  max-width: 100%;
 }
 
 form div,
@@ -57,6 +59,7 @@ select {
   padding: 5px 10px;
   border: 1px solid;
   border-radius: 5px;
+  width: 100%;
 }
 
 .containerUpload ul {

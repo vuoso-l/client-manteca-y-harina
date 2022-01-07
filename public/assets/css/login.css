@@ -17,7 +17,6 @@ form {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  /* border: 2px solid rgb(190, 83, 56); */
   border: 2px solid #ff6701;
   box-shadow: 3px 3px 10px grey;
   border-radius: 10px;
@@ -42,7 +41,6 @@ label,
 }
 
 label {
-  /* background-color: rgb(254 138 70); */
   background-color: #ff6701;
 }
 

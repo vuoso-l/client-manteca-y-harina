@@ -21,7 +21,6 @@ h2 {
 
 form {
   padding: 0 5px;
-  /* border: 2px solid rgb(190, 83, 56); */
   border: 2px solid #ff6701;
   border-radius: 10px;
   font-size: 14px;
@@ -49,7 +48,6 @@ button,
 }
 
 label {
-  /* background-color: rgb(254 138 70); */
   background-color: #ff6701;
 }
 
@@ -97,7 +95,6 @@ td {
 }
 
 tbody tr:nth-child(odd) {
-  /* background-color: rgb(254 138 70); */
   background-color: #fea82f;
 }
 

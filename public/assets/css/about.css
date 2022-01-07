@@ -11,7 +11,6 @@
   background: aliceblue url("../imgMyH/cv.jpg") no-repeat;
   background-size: cover;
   border-radius: 50%;
-  /* box-shadow: -8px 1px 2px 2px rgb(190, 83, 56); */
   box-shadow: -8px 1px 2px 2px #ff6701;
   margin-bottom: 20px;
 }

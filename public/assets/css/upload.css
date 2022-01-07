@@ -1,8 +1,14 @@
 .containerUpload,
-.containerTable {
+.containerTable,
+.btnSession,
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.containerUpload,
+.containerTable {
   padding: 50px 0;
 }
 
@@ -13,9 +19,6 @@ h2 {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 0 5px;
   /* border: 2px solid rgb(190, 83, 56); */
   border: 2px solid #ff6701;
@@ -34,7 +37,8 @@ form div,
 label,
 button,
 .btnView,
-.btnReturn {
+.btnReturn,
+.openSession {
   border: 1px solid;
   border-radius: 10px;
   padding: 5px 15px;
@@ -59,7 +63,8 @@ select {
   padding-left: 0;
 }
 
-button {
+button,
+.openSession {
   background-color: #0000ffb0;
 }
 
@@ -107,10 +112,8 @@ tbody tr:nth-child(odd) {
   background-color: blue;
 }
 
-.btnDelete {
-  background-color: red;
-}
-
+.closeSession,
+.btnDelete,
 .btnReturn {
   background-color: red;
 }
@@ -126,8 +129,13 @@ tbody tr:nth-child(odd) {
 }
 
 @media (min-width: 768px) {
-  #closeSession {
+  .btnSession {
+    flex-direction: row;
+  }
+  .closeSession,
+  .openSession {
     font-size: 20px;
+    margin: 0 5px;
   }
   td {
     font-size: 16px;
@@ -135,7 +143,8 @@ tbody tr:nth-child(odd) {
 }
 
 @media (min-width: 1024px) {
-  #closeSession {
+  .closeSession,
+  .openSession {
     font-size: 22px;
   }
   form {

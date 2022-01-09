@@ -44,6 +44,9 @@ h1::before {
   h1 {
     font-size: 34px;
   }
+  h1::before {
+    padding: 8px 26px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -52,12 +55,12 @@ h1::before {
     padding-top: 10px;
   }
   h1::before {
-    padding: 20px 40px;
+    padding: 20px 45px;
   }
   .navbar-toggler-icon {
     width: 1.5em;
     height: 1.5em;
-  }
+  }  
   .backHeader{
     height: 300px;
   }
@@ -68,6 +71,10 @@ h1::before {
     padding: 20px 10px 0px;
   }
   h1{
+    font-size: 50px;
     padding-bottom: 5px;
+  }
+  .nav-item {
+    font-size: 22px;
   }
 }

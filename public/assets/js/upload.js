@@ -17,7 +17,7 @@ onload = () => {
         containerUpload.innerHTML = `
             <section class="sectionImgError">
                 <h2>No tienes acceso a esta sección!</h2>
-                <img class="imgError" src="/public/assets/imgMyH/logo.jpg" alt="Logo m&h"></img>
+                <img class="imgError" src="../assets/imgMyH/logo.jpg" alt="Logo m&h"></img>
             </section>   
             `;
     }

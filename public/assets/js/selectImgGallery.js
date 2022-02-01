@@ -19,20 +19,14 @@ const selectImgGallery = (image) => {
                             createShowInfoOrders();
                         }
                         break;
-                    case "POSTRES":
-                        if (img.thematic == "POSTRES") {
+                    case "BODAS-COMUNIONES":
+                        if (img.thematic == "BODAS-COMUNIONES") {
                             createShowImage(img);
                             createShowInfoOrders();
                         }
                         break;
-                    case "TORTASBODAS":
-                        if (img.thematic == "TORTASBODAS") {
-                            createShowImage(img);
-                            createShowInfoOrders();
-                        }
-                        break;
-                    case "TORTASVARIAS":
-                        if (img.thematic == "TORTASVARIAS") {
+                    case "TORTAS-VARIAS":
+                        if (img.thematic == "TORTAS-VARIAS") {
                             createShowImage(img);
                             createShowInfoOrders();
                         }

@@ -14,17 +14,46 @@
 .modal-container {
   position: relative;
   padding: 1rem;
-  min-width: 320px;
+  min-width: 280px;
   max-width: 480px;
   min-height: 200px;
   max-height: 600px;
   overflow-y: auto;
   background-color: #fff;
+  border-radius: 20px;
 }
 
 .modal-close {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: red;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 4px 6px;
+}
+
+.modal-container h2 {
+  text-shadow: 4px 4px 8px grey;
+  text-align: center;
+}
+
+.modal-container ul {
+  padding: 0px;
+}
+
+.cake li::before,
+.cookies li::before {
+  content: "\f1fd";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  padding-right: 5px;
+  color: rgb(190, 83, 56);
+}
+
+.cake li::before {
+  content: "\f1fd";
+}
+
+.cookies li::before {
+  content: "\f564";
 }

@@ -2,6 +2,7 @@
 .gallery-container {
   display: none;
   flex-direction: column;
+  align-items: center;
   padding: 50px 0px;
 }
 

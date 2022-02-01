@@ -43,13 +43,8 @@ const createFormUpdateImage = (image) => {
                         <option value="tortas-Varias">Sección para tortas varias</option>
                         <option value="navidad">Sección para navidad</option>
                         <option value="tortas-Bodas">Sección para tortas de bodas</option>
-                        <option value="tortas-Musicales">Sección para tortas musicales</option>
-                        <option value="comuniones">Sección para comuniones</option>
                         <option value="infantiles">Sección para infantiles</option>
-                        <option value="tartas-Dulces">Sección para tartas dulces</option>
                         <option value="postres">Sección para postres</option>
-                        <option value="alfajores">Sección para alfajores</option>
-                        <option value="porcelana-Fria">Sección para porcelana fría</option>
                     </select>
                     <ul id="thematicUpdateError"></ul>
                 </div>

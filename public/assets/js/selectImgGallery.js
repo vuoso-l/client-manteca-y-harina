@@ -7,18 +7,6 @@ const selectImgGallery = (image) => {
         element.addEventListener("click", (e) => {
             image.map(img => {
                 switch (e.target.title) {
-                    case "ALFAJORES":
-                        if (img.thematic == "ALFAJORES") {
-                            createShowImage(img);
-                            createShowInfoOrders();
-                        }
-                        break;
-                    case "COMUNIONES":
-                        if (img.thematic == "COMUNIONES") {
-                            createShowImage(img);
-                            createShowInfoOrders();
-                        }
-                        break;
                     case "INFANTILES":
                         if (img.thematic == "INFANTILES") {
                             createShowImage(img);
@@ -31,32 +19,14 @@ const selectImgGallery = (image) => {
                             createShowInfoOrders();
                         }
                         break;
-                    case "PORCELANAFRIA":
-                        if (img.thematic == "PORCELANAFRIA") {
-                            createShowImage(img);
-                            createShowInfoOrders();
-                        }
-                        break;
                     case "POSTRES":
                         if (img.thematic == "POSTRES") {
                             createShowImage(img);
                             createShowInfoOrders();
                         }
                         break;
-                    case "TARTASDULCES":
-                        if (img.thematic == "TARTASDULCES") {
-                            createShowImage(img);
-                            createShowInfoOrders();
-                        }
-                        break;
                     case "TORTASBODAS":
                         if (img.thematic == "TORTASBODAS") {
-                            createShowImage(img);
-                            createShowInfoOrders();
-                        }
-                        break;
-                    case "TORTASMUSICALES":
-                        if (img.thematic == "TORTASMUSICALES") {
                             createShowImage(img);
                             createShowInfoOrders();
                         }

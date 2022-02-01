@@ -14,7 +14,7 @@ const createShowInfoOrders = () => {
   galleryInfo.innerHTML = `
     
         <div class="modal-container">
-            <h2>Importante</h2>
+            <h3>Importante</h3>
             <button class="modal-close">X</button>
             <ul>
                 <li>Cada torta incluye 3 capas de relleno con altura aprox. de 11 a 12 cm.</li>

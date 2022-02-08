@@ -1,10 +1,10 @@
-# **Frontend de la página web de Manteca & Harina**
+# **Manteca & Harina - Frontend web**
 
-## Enlace que redirecciona a la página
+## To see the project, enter in the folowing link
 
 - [Página web Manteca & Harina](https://vuoso-l.github.io/client-manteca-y-harina/)
 
-## Aspectos técnicos
+## Used technologies
 - HTML5
 - CSS3
 - Javascript

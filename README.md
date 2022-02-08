@@ -2,7 +2,7 @@
 
 ## To see the project, enter in the folowing link
 
-- [Página web Manteca & Harina](https://vuoso-l.github.io/client-manteca-y-harina/)
+- [Web page Manteca & Harina](https://vuoso-l.github.io/client-manteca-y-harina/)
 
 ## Used technologies
 - HTML5
